@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +20,15 @@ namespace Homework
     {
         public static List<int> ListOfSums(List<int> list)
         {
-            // Здесь необходимо написать код.
-
-            return null;
+            List<int> list1 = new List<int>();
+            int counter = 0;
+            foreach (int i in list)
+            {
+                if (i == counter)
+                    list1.Add(i);
+                counter += i;
+            }
+            return list1;
         }
     }
 }
