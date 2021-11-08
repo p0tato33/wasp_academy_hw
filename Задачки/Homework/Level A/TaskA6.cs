@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +18,21 @@ namespace Homework
     {
         public static List<int> OddNumbers(List<int> arr, int n)
         {
-            // Здесь необходимо написать код.
-
-            return null;
+            List<int> st_lst = new List<int>();
+            List<int> res = new List<int>();
+            for (int i = arr.Count - 1; i > 0; i--)
+            {
+                if ((arr[i] % 2 != 0) && (n > 0))
+                {
+                    st_lst.Add(arr[i]);
+                    n--;
+                }
+            }
+            for (int i = st_lst.Count - 1; i > -1; i--)
+            {
+                res.Add(st_lst[i]);
+            }
+            return res;
         }
     }
 }
