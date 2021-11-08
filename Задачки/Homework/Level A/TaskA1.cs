@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,9 +21,14 @@ namespace Homework
     {
         public static int NumberOfSquares(int limit)
         {
-            // Здесь необходимо написать код.
-            
-            return 0;
+            int sum = 1;
+            int counter = 1;
+            while (sum < limit)
+            {
+                counter++;
+                sum += counter * counter;
+            }
+            return counter - 1;
         }
     }
 }
