@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +19,23 @@ namespace Homework
     {
         public static List<int> ArrayOfTiers(int number)
         {
-            // Здесь необходимо написать код.
+            int count = 0;
+            int c2;
+            List<int> res_lst = new List<int>();
+            while (number > 0)
+            {
+                number /= 10;
+                count++;
+            }
 
-            return null;
+            c2 = count;
+            count--;
+            for (int i = 0; i < c2; i++)
+            {
+                res_lst.Add(number / Convert.ToInt32(Math.Pow(10, count)));
+                count--;
+            }
+            return res_lst;
         }
     }
 }
