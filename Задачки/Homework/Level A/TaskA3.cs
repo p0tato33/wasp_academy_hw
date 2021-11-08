@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,9 +22,16 @@ namespace Homework
     {
         public static int SumCube(int n, int m)
         {
-            // Здесь необходимо написать код.
-
-            return 0;
+            int counter = 0;
+            int minn = Math.Min(n, m);
+            int maxx = Math.Max(n, m);
+            // double cub = Math.Pow(minn, 3);
+            while (minn < maxx)
+            {
+                minn++;
+                counter += minn * minn * minn;
+            }
+            return counter;
         }
     }
 }
