@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +18,13 @@ namespace Homework
     {
         public static string Reverser(string s)
         {
-            // Здесь необходимо написать код.
-
-            return "";
+            char[] rev = s.ToCharArray();   //получаем массив чаров
+            Array.Reverse(rev);
+            s = new string(rev);
+            string[] sp_new = s.Split(' ');
+            Array.Reverse(sp_new);
+            string result = string.Join(" ", sp_new); //joinim через проьбел
+            return result;
         }
     }
 }
