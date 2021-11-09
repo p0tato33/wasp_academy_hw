@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +20,35 @@ namespace Homework
     {
         public static List<int> OrderWeight(List<int> list)
         {
-            // Здесь необходимо написать код.
-
-            return null;
+            int x;
+            int s;
+            int s2;
+            int n2;
+            int n;
+            for (int i = 0; i < list.Count; i++)
+            {
+                for (int j = i + 1; j < list.Count; j++)
+                {
+                    n2 = list[i]; n = list[j]; s = n2 % 10; s2 = n % 10;
+                    do
+                    {
+                        n2 /= 10;
+                        s += n2 % 10;
+                    } while (n2 > 9);
+                    do
+                    {
+                        n /= 10;
+                        s2 += n % 10;
+                    } while (n > 9);
+                    if (s > s2 || s == s2 && string.Compare(list[i].ToString(), list[j].ToString()) > 0)
+                    {
+                        x = list[i];
+                        list[i] = list[j];
+                        list[j] = x;
+                    }
+                }
+            }
+            return list;
         }
     }
 }
