@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,9 +22,14 @@ namespace Homework
     {
         public static double MeanSquare(List<int> list1, List<int> list2)
         {
-            // Здесь необходимо написать код.
-
-            return 0;
+            double count = 0;
+			double len = list1.Count;
+            for (int i = 0; i < len; i++)
+            {
+                count += (list1[i] - list2[i]) * (list1[i] - list2[i]);
+            }
+            int avg = count / len;
+            return avg;
         }
     }
 }
