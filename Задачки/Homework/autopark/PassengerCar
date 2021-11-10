@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+
+namespace Academy
+{
+    public class PassengerCar : Car
+    {
+        protected int passengers;
+        protected Dictionary<string, int> fitches;
+        public PassengerCar(string label, int power, int year, int passengers, Dictionary<string, int> fitches) : base(label, power, year)
+        {
+            this.passengers = passengers;
+            this.fitches = fitches;
+        }
+        public void AddDeteil(string name, int year)
+        {
+            fitches.Add(name, year);
+        }
