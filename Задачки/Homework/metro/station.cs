@@ -23,7 +23,7 @@ namespace Academy
         {
             this.name = name;
             this.color = color;
-            this.transfers = transfers;
+            foreach(Station i in transfers) { this.transfers.Add(i); }   //подправил через foreach
         }
         public string GetName()
         {
