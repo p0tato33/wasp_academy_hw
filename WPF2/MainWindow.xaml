@@ -1,0 +1,34 @@
+<Window x:Class="UNREALWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UNREALWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="220" Topmost="True" Background="#FF515151">
+  <Grid Margin="0,0,490.359,0">
+    <Label x:Name="pin" Content="PIN:" HorizontalAlignment="Left" Margin="39.625,87,-79.625,0" VerticalAlignment="Top" Width="40" Height="32.96" Background="#00000000" FontSize="16" Foreground="White"/>
+    <Button x:Name="btm_cancel" Content="×" HorizontalAlignment="Left" Height="40" Margin="43.291,283.791,-83.291,0" VerticalAlignment="Top" Width="40" Foreground="White" Background="#00DDDDDD" BorderThickness="1" FontSize="24" BorderBrush="#E8FFFFFF" Click="Btm_cancel_Click" MouseEnter="Btm_MouseEnter"/>
+    <Button x:Name="btm_enter" Content="✓" HorizontalAlignment="Left" Height="40" Margin="133.208,283.791,-173.208,0" VerticalAlignment="Top" Width="40" Foreground="White" Background="#00DDDDDD" BorderThickness="1" FontSize="24" BorderBrush="#E8FFFFFF" Click="Btm_enter_Click" MouseEnter="Btm_MouseEnter"/>
+    <Grid x:Name="numbers" HorizontalAlignment="Left" Height="207" Margin="16.169,125.5,-197.669,0" VerticalAlignment="Top" Width="181.5">
+      <Button x:Name="btm1" Content="1" HorizontalAlignment="Left" Height="40" Margin="27,23,0,0" VerticalAlignment="Top" Width="40" Foreground="White" Background="#00DDDDDD" BorderThickness="1" FontSize="24" BorderBrush="White" Click="Btm_Click" MouseEnter="Btm_MouseEnter"/>
+      <Button x:Name="btm2" Content="2" HorizontalAlignment="Left" Height="40" Margin="72,23,0,0" VerticalAlignment="Top" Width="40" Foreground="White" Background="#00000000" BorderThickness="1" FontSize="24" Click="Btm_Click" HorizontalContentAlignment="Center" MouseEnter="Btm_MouseEnter">
+        <Button.BorderBrush>
+          <SolidColorBrush Color="#E8FFFFFF"/>
+        </Button.BorderBrush>
+      </Button>
+      <Button x:Name="btm3" Content="3" HorizontalAlignment="Left" Height="40" Margin="117,23,0,0" VerticalAlignment="Top" Width="40" Foreground="White" Background="#00DDDDDD" BorderThickness="1" FontSize="24" BorderBrush="#E8FFFFFF" Click="Btm_Click" MouseEnter="Btm_MouseEnter"/>
+      <Button x:Name="btm4" Content="4" HorizontalAlignment="Left" Height="40" Margin="27,68,0,0" VerticalAlignment="Top" Width="40" Foreground="White" Background="#00DDDDDD" BorderThickness="1" FontSize="24" BorderBrush="#E8FFFFFF" Click="Btm_Click" MouseEnter="Btm_MouseEnter"/>
+      <Button x:Name="btm5" Content="5" HorizontalAlignment="Left" Height="40" Margin="72,68,0,0" VerticalAlignment="Top" Width="40" Foreground="White" Background="#00DDDDDD" BorderThickness="1" FontSize="24" BorderBrush="#E8FFFFFF" Click="Btm_Click" MouseEnter="Btm_MouseEnter"/>
+      <Button x:Name="btm6" Content="6" HorizontalAlignment="Left" Height="40" Margin="117,68,0,0" VerticalAlignment="Top" Width="40" Foreground="White" Background="#00DDDDDD" BorderThickness="1" FontSize="24" BorderBrush="#E8FFFFFF" Click="Btm_Click" MouseEnter="Btm_MouseEnter"/>
+      <Button x:Name="btm7" Content="7" HorizontalAlignment="Left" Height="40" Margin="27,113,0,0" VerticalAlignment="Top" Width="40" Foreground="White" Background="#00DDDDDD" BorderThickness="1" FontSize="24" BorderBrush="#E8FFFFFF" Click="Btm_Click" MouseEnter="Btm_MouseEnter"/>
+      <Button x:Name="btm8" Content="8" HorizontalAlignment="Left" Height="40" Margin="72,113,0,0" VerticalAlignment="Top" Width="40" Foreground="White" Background="#00DDDDDD" BorderThickness="1" FontSize="24" BorderBrush="#E8FFFFFF" Click="Btm_Click" MouseEnter="Btm_MouseEnter"/>
+      <Button x:Name="btm9" Content="9" HorizontalAlignment="Left" Height="40" Margin="117,113,0,0" VerticalAlignment="Top" Width="40" Foreground="White" Background="#00DDDDDD" BorderThickness="1" FontSize="24" BorderBrush="#E8FFFFFF" Click="Btm_Click" MouseEnter="Btm_MouseEnter"/>
+      <Button x:Name="btm0" Content="0" HorizontalAlignment="Left" Height="40" Margin="72,158,0,0" VerticalAlignment="Top" Width="40" Foreground="White" Background="#00DDDDDD" BorderThickness="1" FontSize="24" BorderBrush="#E8FFFFFF" Click="Btm_Click" MouseEnter="Btm_MouseEnter"/>
+    </Grid>
+    <TextBox x:Name="your_pin" HorizontalAlignment="Left" Height="25.167" Margin="84.625,91.458,-185.125,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100.5" TextOptions.TextHintingMode="Animated" IsUndoEnabled="False"/>
+    <TextBlock x:Name="welcome" Height="55.458" Margin="63.958,186.334,-185.125,0" TextWrapping="Wrap" Text="Pin is correct. Welcome" VerticalAlignment="Top" Width="121.167" FontSize="20" HorizontalAlignment="Left" Foreground="White" Visibility="Hidden" />
+    <TextBlock HorizontalAlignment="Left" Height="23.666" Margin="58.337,23.671,-151.667,0" TextWrapping="Wrap" Text="PIN Length" VerticalAlignment="Top" Width="93.33" FontSize="18" Foreground="White"/>
+    <TextBlock x:Name="pin_length" HorizontalAlignment="Left" Height="23.001" Margin="156.667,23.671,-185.125,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="28.458" Foreground="White" FontSize="18"/>
+    <Slider x:Name="pin_length_slider" HorizontalAlignment="Left" Margin="63.958,51.657,-163.958,0" VerticalAlignment="Top" Width="100" ValueChanged="Pin_length_slider_ValueChanged" Minimum="1" Maximum="28"/>
+  </Grid>
